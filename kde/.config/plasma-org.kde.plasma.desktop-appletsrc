@@ -233,6 +233,10 @@ plugin=org.kde.plasma.battery
 immutability=1
 plugin=org.kde.kscreen
 
+[Containments][2][Applets][7][Applets][35]
+immutability=1
+plugin=org.kde.plasma.brightness
+
 [Containments][2][Applets][7][Applets][8]
 immutability=1
 plugin=org.kde.plasma.cameraindicator
