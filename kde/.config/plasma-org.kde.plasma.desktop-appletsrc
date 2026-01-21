@@ -117,6 +117,13 @@ plugin=org.kde.plasma.battery
 immutability=1
 plugin=org.kde.plasma.brightness
 
+[Containments][18][Applets][23][Applets][37]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
+[Containments][18][Applets][23][Applets][37][Configuration]
+PreloadWeight=42
+
 [Containments][18][Applets][23][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
@@ -236,6 +243,13 @@ plugin=org.kde.kscreen
 [Containments][2][Applets][7][Applets][35]
 immutability=1
 plugin=org.kde.plasma.brightness
+
+[Containments][2][Applets][7][Applets][36]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
+[Containments][2][Applets][7][Applets][36][Configuration]
+PreloadWeight=42
 
 [Containments][2][Applets][7][Applets][8]
 immutability=1
