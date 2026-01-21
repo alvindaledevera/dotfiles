@@ -128,6 +128,9 @@ plugin=org.kde.kscreen
 immutability=1
 plugin=org.kde.plasma.volume
 
+[Containments][18][Applets][23][Applets][31][Configuration]
+PreloadWeight=55
+
 [Containments][18][Applets][23][Applets][31][Configuration][General]
 migrated=true
 
