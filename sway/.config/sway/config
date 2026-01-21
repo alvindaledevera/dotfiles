@@ -25,6 +25,9 @@ set $menu wofi --show run
 # Your preferred file browser
 set $filebrowser thunar
 
+# Your preferred web browser
+set $filebrowser google-chrome-stable
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -82,6 +85,9 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
      # Start your file browser
     bindsym $mod+e exec $filebrowser
+
+     # Start your web browser
+    bindsym $mod+Shift+b exec $webbrowser
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
