@@ -26,7 +26,7 @@ set $menu wofi --show run
 set $filebrowser thunar
 
 # Your preferred web browser
-set $filebrowser google-chrome-stable
+set $webbrowser google-chrome-stable
 
 ### Output configuration
 #
