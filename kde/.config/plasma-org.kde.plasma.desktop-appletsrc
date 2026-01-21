@@ -19,6 +19,13 @@ wallpaperplugin=org.kde.image
 DialogHeight=630
 DialogWidth=810
 
+[Containments][1][Wallpaper][org.kde.color][General]
+Color=0,0,0
+
+[Containments][1][Wallpaper][org.kde.image][General]
+Image=~/dotfiles/bg.png
+SlidePaths=/usr/share/wallpapers/
+
 [Containments][16]
 ItemGeometries-1600x900=
 ItemGeometriesHorizontal=
@@ -29,6 +36,14 @@ lastScreen=1
 location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
+
+[Containments][16][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][16][Wallpaper][org.kde.image][General]
+Image=~/dotfiles/bg.png
+SlidePaths=/usr/share/wallpapers/
 
 [Containments][18]
 activityId=
@@ -111,17 +126,30 @@ plugin=org.kde.kscreen
 
 [Containments][18][Applets][23][Applets][31]
 immutability=1
-plugin=org.kde.plasma.battery
+plugin=org.kde.plasma.volume
+
+[Containments][18][Applets][23][Applets][31][Configuration][General]
+migrated=true
 
 [Containments][18][Applets][23][Applets][32]
 immutability=1
 plugin=org.kde.plasma.brightness
 
+[Containments][18][Applets][23][Applets][32][Configuration]
+PreloadWeight=55
+
 [Containments][18][Applets][23][Applets][37]
+immutability=1
+plugin=org.kde.plasma.battery
+
+[Containments][18][Applets][23][Applets][37][Configuration]
+PreloadWeight=36
+
+[Containments][18][Applets][23][Applets][39]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
 
-[Containments][18][Applets][23][Applets][37][Configuration]
+[Containments][18][Applets][23][Applets][39][Configuration]
 PreloadWeight=42
 
 [Containments][18][Applets][23][ConfigDialog]
@@ -129,8 +157,8 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][18][Applets][23][General]
-extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.kscreen
-knownItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.kscreen
+extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.kscreen,org.kde.plasma.volume
+knownItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.kscreen,org.kde.plasma.volume
 
 [Containments][18][Applets][33]
 immutability=1
@@ -242,13 +270,26 @@ plugin=org.kde.kscreen
 
 [Containments][2][Applets][7][Applets][35]
 immutability=1
-plugin=org.kde.plasma.brightness
+plugin=org.kde.plasma.volume
+
+[Containments][2][Applets][7][Applets][35][Configuration]
+PreloadWeight=85
+
+[Containments][2][Applets][7][Applets][35][Configuration][General]
+migrated=true
 
 [Containments][2][Applets][7][Applets][36]
 immutability=1
-plugin=org.kde.plasma.mediacontroller
+plugin=org.kde.plasma.brightness
 
 [Containments][2][Applets][7][Applets][36][Configuration]
+PreloadWeight=31
+
+[Containments][2][Applets][7][Applets][38]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
+[Containments][2][Applets][7][Applets][38][Configuration]
 PreloadWeight=42
 
 [Containments][2][Applets][7][Applets][8]
@@ -259,13 +300,16 @@ plugin=org.kde.plasma.cameraindicator
 immutability=1
 plugin=org.kde.plasma.clipboard
 
+[Containments][2][Applets][7][Applets][9][Configuration]
+PreloadWeight=55
+
 [Containments][2][Applets][7][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
 [Containments][2][Applets][7][General]
-extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.kscreen
-knownItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.kscreen
+extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.kscreen,org.kde.plasma.volume
+knownItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.kscreen,org.kde.plasma.volume
 
 [Containments][2][General]
 AppletOrder=3;4;5;6;7;14;15
