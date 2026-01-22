@@ -23,7 +23,7 @@ DialogWidth=810
 Color=0,0,0
 
 [Containments][1][Wallpaper][org.kde.image][General]
-Image=~/dotfiles/bg.png
+Image=file:///home/alvin/dotfiles/bg.png
 SlidePaths=/usr/share/wallpapers/
 
 [Containments][16]
@@ -42,7 +42,7 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][16][Wallpaper][org.kde.image][General]
-Image=~/dotfiles/bg.png
+Image=file:///home/alvin/dotfiles/bg.png
 SlidePaths=/usr/share/wallpapers/
 
 [Containments][18]
@@ -79,7 +79,7 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][18][Applets][21][Configuration][General]
-launchers=applications:systemsettings.desktop,preferred://filemanager,preferred://browser,applications:code-oss.desktop,applications:Alacritty.desktop
+launchers=applications:systemsettings.desktop,applications:virt-manager.desktop,preferred://filemanager,preferred://browser,applications:code-oss.desktop,applications:Alacritty.desktop
 
 [Containments][18][Applets][22]
 immutability=1
@@ -230,7 +230,7 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][2][Applets][5][Configuration][General]
-launchers=applications:systemsettings.desktop,preferred://filemanager,preferred://browser,applications:code-oss.desktop,applications:Alacritty.desktop
+launchers=applications:systemsettings.desktop,applications:virt-manager.desktop,preferred://filemanager,preferred://browser,applications:code-oss.desktop,applications:Alacritty.desktop
 
 [Containments][2][Applets][6]
 immutability=1
