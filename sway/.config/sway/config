@@ -19,8 +19,8 @@ set $term alacritty
 
 # Your preferred application launcher
 # set $menu wmenu-run
-set $menu wofi --show drun
-set $allmenu wofi --show run
+set $menu pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun
+set $allmenu pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show run
 
 
 # Your preferred file browser
@@ -230,22 +230,33 @@ bindsym $mod+r mode "resize"
     # Special key to take a screenshot with grim
     bindsym Print exec grim
 
+# #
+# # Status Bar:
+# #
+# # Read `man 5 sway-bar` for more information about this section.
+# bar {
+#     position top
+
+#     # When the status_command prints a new line to stdout, swaybar updates.
+#     # The default just shows the current date and time.
+#     status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+
+#     colors {
+#         statusline #ffffff
+#         background #323232
+#         inactive_workspace #32323200 #32323200 #5c5c5c
+#     }
+# }
+
+
+
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+    swaybar_command waybar
+    
 }
 
 include /etc/sway/config.d/*
