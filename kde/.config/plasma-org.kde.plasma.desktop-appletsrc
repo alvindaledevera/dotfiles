@@ -79,7 +79,7 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][18][Applets][21][Configuration][General]
-launchers=applications:systemsettings.desktop,applications:virt-manager.desktop,preferred://filemanager,preferred://browser,applications:code-oss.desktop,applications:Alacritty.desktop
+launchers=applications:systemsettings.desktop,preferred://filemanager,preferred://browser,applications:code-oss.desktop,applications:Alacritty.desktop
 
 [Containments][18][Applets][22]
 immutability=1
@@ -160,8 +160,8 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][18][Applets][23][General]
-extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.kscreen,org.kde.plasma.volume
-knownItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.kscreen,org.kde.plasma.volume
+extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness
+knownItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness
 
 [Containments][18][Applets][33]
 immutability=1
@@ -230,7 +230,7 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][2][Applets][5][Configuration][General]
-launchers=applications:systemsettings.desktop,applications:virt-manager.desktop,preferred://filemanager,preferred://browser,applications:code-oss.desktop,applications:Alacritty.desktop
+launchers=applications:systemsettings.desktop,preferred://filemanager,preferred://browser,applications:code-oss.desktop,applications:Alacritty.desktop
 
 [Containments][2][Applets][6]
 immutability=1
@@ -311,8 +311,8 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][2][Applets][7][General]
-extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.kscreen,org.kde.plasma.volume
-knownItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.kscreen,org.kde.plasma.volume
+extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness
+knownItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness
 
 [Containments][2][General]
 AppletOrder=3;4;5;6;7;14;15
