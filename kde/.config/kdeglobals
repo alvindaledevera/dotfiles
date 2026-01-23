@@ -1,0 +1,8 @@
+[General]
+ColorScheme=BreezeDark
+Name=BreezeDark
+widgetStyle=Breeze
+
+[WM]
+activeBackground=38,38,38
+inactiveBackground=28,28,28

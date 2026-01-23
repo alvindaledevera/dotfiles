@@ -1,0 +1,5 @@
+[Compositing]
+Enabled=true
+
+[Effect-Blur]
+Enabled=true
