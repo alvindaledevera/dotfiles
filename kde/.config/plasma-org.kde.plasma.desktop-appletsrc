@@ -95,7 +95,7 @@ migrated=true
 
 [Containments][18][Applets][23][Applets][32]
 immutability=1
-plugin=org.kde.plasma.brightness
+plugin=org.kde.plasma.networkmanagement
 
 [Containments][18][Applets][23][Applets][32][Configuration]
 PreloadWeight=65
@@ -112,7 +112,11 @@ immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][18][Applets][23][Applets][39][Configuration]
-PreloadWeight=42
+PreloadWeight=34
+
+[Containments][18][Applets][23][Applets][44]
+immutability=1
+plugin=org.kde.plasma.brightness
 
 [Containments][18][Applets][23][ConfigDialog]
 DialogHeight=630
@@ -242,7 +246,7 @@ migrated=true
 
 [Containments][2][Applets][7][Applets][36]
 immutability=1
-plugin=org.kde.plasma.brightness
+plugin=org.kde.plasma.networkmanagement
 
 [Containments][2][Applets][7][Applets][36][Configuration]
 PreloadWeight=41
@@ -252,7 +256,11 @@ immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][2][Applets][7][Applets][38][Configuration]
-PreloadWeight=42
+PreloadWeight=34
+
+[Containments][2][Applets][7][Applets][43]
+immutability=1
+plugin=org.kde.plasma.brightness
 
 [Containments][2][Applets][7][Applets][8]
 immutability=1
@@ -276,10 +284,10 @@ knownItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasm
 [Containments][2][General]
 AppletOrder=3;4;5;6;7;14;15
 
-[Containments][39]
+[Containments][41]
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
-activityId=f5f9842d-705a-4953-bb79-0e25210764fa
+activityId=0f3e3ab5-4572-45f9-aeda-c6d30b1dc00d
 formfactor=0
 immutability=1
 lastScreen=0
@@ -287,18 +295,18 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
-[Containments][39][ConfigDialog]
+[Containments][41][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
-[Containments][39][Wallpaper][org.kde.image][General]
-Image=file:///home/alvin/dotfiles/bg.png
+[Containments][41][Wallpaper][org.kde.image][General]
+Image=file:///home/alvin/Pictures/bg.png
 SlidePaths=/usr/share/wallpapers/
 
-[Containments][40]
+[Containments][42]
 ItemGeometries-1600x900=
 ItemGeometriesHorizontal=
-activityId=f5f9842d-705a-4953-bb79-0e25210764fa
+activityId=0f3e3ab5-4572-45f9-aeda-c6d30b1dc00d
 formfactor=0
 immutability=1
 lastScreen=1
@@ -306,12 +314,12 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
-[Containments][40][ConfigDialog]
+[Containments][42][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
-[Containments][40][Wallpaper][org.kde.image][General]
-Image=file:///home/alvin/dotfiles/bg.png
+[Containments][42][Wallpaper][org.kde.image][General]
+Image=file:///home/alvin/Pictures/bg.png
 SlidePaths=/usr/share/wallpapers/
 
 [ScreenMapping]
