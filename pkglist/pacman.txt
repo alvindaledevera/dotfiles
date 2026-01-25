@@ -9,3 +9,5 @@ papirus-icon-theme
 sway
 waybar
 wofi
+inter-font
+ttf-nerd-fonts-symbols
