@@ -23,10 +23,6 @@ if ! command -v stow &> /dev/null; then
     sudo pacman -S --needed stow
 fi
 
-# power menu
-chmod +x ~/.config/waybar/powermenu.sh
-echo "Waybar powermenu.sh is now executable"
-
 # ------------------------------------------
 # 3️⃣ Stow all dotfiles (adopt existing configs) - loop version
 # ------------------------------------------
@@ -40,6 +36,12 @@ for pkg in "${STOW_PACKAGES[@]}"; do
     echo "Stowing $pkg..."
     stow --adopt "$pkg"
 done
+
+
+# power menu
+chmod +x ~/.config/waybar/powermenu.sh
+echo "Waybar powermenu.sh is now executable"
+
 
 echo "✅ Installation complete!"
 echo "Please log out and log back in to apply environment variables and dark theme."
