@@ -11,7 +11,6 @@
     "pulseaudio",
     "network",
     "battery",
-    "battery",
     "custom/power",
     "tray"
   ],
