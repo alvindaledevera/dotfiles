@@ -3,7 +3,7 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
-exec --no-startup-id autotiling
+exec autotiling
 for_window [class=".*"] border none
 for_window [window_type="normal"] border none
 
