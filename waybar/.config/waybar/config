@@ -11,6 +11,8 @@
     "pulseaudio",
     "network",
     "battery",
+    "battery",
+    "custom/power",
     "tray"
   ],
 
@@ -61,5 +63,12 @@
       "warning": 30,
       "critical": 15
     }
-  }
+  },
+
+  "custom/power": {
+  "format": "⏻",
+  "on-click": "~/.config/waybar/powermenu.sh",
+  "tooltip": false
+}
+
 }

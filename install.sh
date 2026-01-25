@@ -23,6 +23,10 @@ if ! command -v stow &> /dev/null; then
     sudo pacman -S --needed stow
 fi
 
+# power menu
+chmod +x ~/.config/waybar/powermenu.sh
+echo "Waybar powermenu.sh is now executable"
+
 # ------------------------------------------
 # 3️⃣ Stow all dotfiles (adopt existing configs) - loop version
 # ------------------------------------------

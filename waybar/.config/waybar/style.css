@@ -40,3 +40,13 @@ window#waybar {
   padding: 0 4px;
   font-size: 12px;
 }
+#custom-power {
+  font-size: 12px;
+  padding: 0 12px;
+  color: #ffffff;
+}
+
+#custom-power:hover {
+  background: rgba(224, 108, 117, 0.2);
+  border-radius: 10px;
+}
