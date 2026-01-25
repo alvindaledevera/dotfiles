@@ -7,6 +7,8 @@ exec autotiling
 for_window [class=".*"] border none
 for_window [window_type="normal"] border none
 
+for_window [tiling] border pixel 2
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
