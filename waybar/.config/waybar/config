@@ -1,77 +1,65 @@
 {
-  "layer": "bot",
-  "spacing": 0,
-  "height": 0,
-  "margin-bottom": 0,
+  "layer": "top",
   "position": "top",
-  "modules-left": ["sway/workspaces"],
-  "modules-center": ["custom/applauncher"],
+  "spacing": 4,
+  "modules-left": ["custom/applauncher","sway/workspaces"],
+  "modules-center": ["sway/window"],
   "modules-right": [
+    "cpu",
+    "memory",
+    "clock",
+    "pulseaudio",
     "network",
     "battery",
-    "pulseaudio",
-    "tray",
-    "clock"
+    "tray"
   ],
-  "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": false,
+
+  "custom/applauncher": {
+    "format": "\udb82\udcc7",
+    "on-click": "pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun --location=top-left -x 15",
     "tooltip": false
   },
   "sway/workspaces": {
     "disable-scroll": true,
-    "all-outputs": false,
-    "tooltip": false
+    "format": "{name}"
   },
-  "custom/applauncher": {
-    "format": "APP",
-    "on-click": "pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun --location=top -y 15",
-    "tooltip": false
+
+  "sway/window": {
+    "format": "{title}",
+    "max-length": 60,
+    "rewrite": {
+      "(.*) — Mozilla Firefox": " $1",
+      "(.*) - Alacritty": " $1"
+    }
   },
-  "tray": {
-    "spacing": 10,
-    "tooltip": false
+  "cpu": {
+        "format": " {usage}% ",
+        "tooltip": false
+  },
+  "memory": {
+        "format": " {}%  "
   },
   "clock": {
-    "format": "󰅐 {:%H:%M}",
-    "tooltip": false
+    "format": "{:%a %b %d  %H:%M} "
   },
-  "network": {
-    "format-wifi": " {bandwidthDownBits}",
-    "format-ethernet": " {bandwidthDownBits}",
-    "format-disconnected": "󰤮 No Network",
-    "interval": 5,
-    "tooltip": false
-  },
+
   "pulseaudio": {
-    "scroll-step": 5,
-    "max-volume": 150,
-    "format": "{icon} {volume}%",
-    "format-bluetooth": "{icon} {volume}%",
-    "format-icons": [
-      "",
-      "",
-      " "
-    ],
-    "nospacing": 1,
-    "format-muted": " ",
-    "on-click": "pavucontrol",
-    "tooltip": false
+    "format": "  {volume}% ",
+    "format-muted": "  muted ",
+    "scroll-step": 5
   },
+
+  "network": {
+    "format-wifi": "  {signalStrength}% ",
+    "format-ethernet": "󰈀  wired ",
+    "format-disconnected": "⚠"
+  },
+
   "battery": {
+    "format": "  {capacity}% ",
     "states": {
       "warning": 30,
       "critical": 15
-    },
-    "format": "{icon} {capacity}%",
-    "format-charging": "󰂄 {capacity}%",
-    "format-plugged": "󰂄{capacity}%",
-    "format-alt": "{icon} {time}",
-    "format-full": "󱈑 {capacity}%",
-    "format-icons": [
-      "󱊡",
-      "󱊢",
-      "󱊣"
-    ]
+    }
   }
 }

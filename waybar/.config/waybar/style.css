@@ -1,0 +1,42 @@
+* {
+  font-family: "Inter", "Symbols Nerd Font", sans-serif;
+  font-size: 12px;
+}
+
+#custom-applauncher {
+  font-size: 16px;
+  padding: 0 12px;
+}
+
+#custom-applauncher:hover {
+  background: rgba(255,255,255,0.08);
+  border-radius: 6px;
+}
+
+
+window#waybar {
+  background: rgba(20, 20, 20, 0.70);
+  color: #ffffff;
+}
+
+#workspaces button {
+  padding: 0 4px;
+  color: #888;
+}
+
+#workspaces button.focused {
+  color: #fff;
+  background: #5e81ac;
+  border-radius: 4px;
+}
+
+#cpu,
+#memory,
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#tray {
+  padding: 0 4px;
+  font-size: 12px;
+}
