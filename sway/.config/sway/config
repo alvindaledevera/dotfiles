@@ -9,6 +9,8 @@ for_window [window_type="normal"] border none
 
 for_window [tiling] border pixel 2
 
+exec_always bash -c "source $HOME/.profile"
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -94,7 +96,7 @@ output DP-2 resolution 1600x900 position 0,0
     # Kill focused window
     bindsym $mod+q kill
     #logout option
-    bindsym $mod+Shift+q  exec ~/.config/waybar/powermenu.sh
+    bindsym $mod+Shift+q exec ~/scripts/powermenu.sh
 
     # Start your launcher
     bindsym $mod+d exec $menu

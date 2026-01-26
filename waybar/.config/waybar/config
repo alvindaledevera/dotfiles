@@ -65,10 +65,9 @@
     "format-connected-battery": " {device_alias} {device_battery_percentage}%",
     "format-disabled": "󰂲 off",
     "tooltip-format": "{status}\n{device_alias}",
-    "on-click": "bash -c 'pgrep -x blueman-manager && pkill -x blueman-manager || blueman-manager'"
+    "on-click":"bluetoothctl show | grep -q \"Powered: yes\" && bluetoothctl power off || bluetoothctl power on",
+    "on-click-right": "~/scripts/bluetoothmenu.sh"
   },
-
-
 
   "battery": {
     "format": "   {capacity}% ",
@@ -80,7 +79,7 @@
 
   "custom/power": {
   "format": "⏻",
-  "on-click": "~/.config/waybar/powermenu.sh",
+  "on-click": "~/scripts/powermenu.sh",
   "tooltip": false
 }
 

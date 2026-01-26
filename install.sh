@@ -27,7 +27,7 @@ fi
 # 3️⃣ Stow all dotfiles (adopt existing configs) - loop version
 # ------------------------------------------
 DOTFILES_DIR="$(pwd)"
-STOW_PACKAGES=("env" "gtk" "qt" "sway" "waybar" "kde")
+STOW_PACKAGES=("env" "gtk" "qt" "sway" "waybar" "kde" "scripts")
 
 echo "Stowing all dotfiles (adopt existing configs)..."
 cd "$DOTFILES_DIR"
@@ -39,7 +39,7 @@ done
 
 
 # power menu
-chmod +x ~/.config/waybar/powermenu.sh
+chmod +x ~/scripts/*
 echo "Waybar powermenu.sh is now executable"
 
 
