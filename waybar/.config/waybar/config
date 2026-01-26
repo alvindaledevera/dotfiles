@@ -2,18 +2,20 @@
   "layer": "top",
   "position": "top",
   "spacing": 4,
-  "modules-left": ["custom/applauncher","sway/workspaces"],
+  "modules-left": [
+    "custom/applauncher",
+    "sway/workspaces",
+    "clock"],
   "modules-center": ["sway/window"],
   "modules-right": [
     "cpu",
     "memory",
-    "clock",
     "pulseaudio",
     "network",
     "bluetooth",
     "battery",
     "tray",
-    "custom/power"
+    "custom/power"    
   ],
 
   "custom/applauncher": {
@@ -42,7 +44,7 @@
         "format": " {}%  "
   },
   "clock": {
-    "format": "{:%a %b %d  %I:%M %p} "
+    "format": "\t\t{:%a %b %d  %I:%M %p} "
   },
 
   "pulseaudio": {
@@ -66,8 +68,10 @@
     "on-click": "bash -c 'pgrep -x blueman-manager && pkill -x blueman-manager || blueman-manager'"
   },
 
+
+
   "battery": {
-    "format": "  {capacity}% ",
+    "format": "   {capacity}% ",
     "states": {
       "warning": 30,
       "critical": 15
