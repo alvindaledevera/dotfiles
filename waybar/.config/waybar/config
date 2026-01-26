@@ -17,7 +17,7 @@
 
   "custom/applauncher": {
     "format": "\udb82\udcc7",
-    "on-click": "pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun --location=top-left -x 15",
+    "on-click": "pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun",
     "tooltip": false
   },
   "sway/workspaces": {
