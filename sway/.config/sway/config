@@ -93,6 +93,8 @@ output DP-2 resolution 1600x900 position 0,0
 
     # Kill focused window
     bindsym $mod+q kill
+    #logout option
+    bindsym $mod+Shift+q  exec ~/.config/waybar/powermenu.sh
 
     # Start your launcher
     bindsym $mod+d exec $menu
