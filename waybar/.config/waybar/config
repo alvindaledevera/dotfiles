@@ -10,9 +10,10 @@
     "clock",
     "pulseaudio",
     "network",
+    "bluetooth",
     "battery",
-    "custom/power",
-    "tray"
+    "tray",
+    "custom/power"
   ],
 
   "custom/applauncher": {
@@ -54,6 +55,15 @@
     "format-wifi": "  {signalStrength}% ",
     "format-ethernet": "󰈀  wired ",
     "format-disconnected": "⚠"
+  },
+
+  "bluetooth": {
+    "format": " {status}",
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    "format-disabled": "󰂲 off",
+    "tooltip-format": "{status}\n{device_alias}",
+    "on-click": "bash -c 'pgrep -x blueman-manager && pkill -x blueman-manager || blueman-manager'"
   },
 
   "battery": {
