@@ -54,11 +54,12 @@
   },
 
   "network": {
-    "format-wifi": "  {signalStrength}% ",
+    "format-wifi": " ",
     "format-ethernet": "󰈀  wired ",
-    "format-disconnected": "⚠"
+    "format-disconnected": "⚠",
+    "tooltip-format" : "{signalStrength}% {essid}",
+    "on-click": "bash -c 'pgrep -x nmtui >/dev/null && pkill nmtui || alacritty -e nmtui'"
   },
-
   "bluetooth": {
     "format": " {status}",
     "format-connected": " {device_alias}",
