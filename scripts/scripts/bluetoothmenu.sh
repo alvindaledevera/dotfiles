@@ -1,36 +1,61 @@
 #!/usr/bin/env bash
-# Check if wofi power menu is running
-if pgrep -x wofi >/dev/null; then
-    killall wofi   # close existing menu
+
+TIMEOUT=5
+
+CACHE="/tmp/bt_devices"
+
+# close wofi if already open
+pgrep -x wofi >/dev/null && killall wofi && exit 0
+
+# --- check / enable bluetooth ---
+state=$(bluetoothctl show | awk '/PowerState/ {print $2}')
+
+case "$state" in
+    off)
+        bluetoothctl power on >/dev/null
+        ;;
+    off-blocked)
+        rfkill unblock bluetooth
+        for ((i=1; i<=TIMEOUT; i++)); do
+            new_state=$(bluetoothctl show | awk '/PowerState/ {print $2}')
+            [[ "$new_state" == "on" ]] && break
+            sleep 1
+        done
+        [[ "$new_state" != "on" ]] && exit 1
+        ;;
+esac
+
+# --- scan devices (same logic as fzf script) ---
+bluetoothctl -t "$TIMEOUT" scan on >/dev/null
+
+# --- collect discovered + paired devices ---
+bluetoothctl devices | sed 's/^Device //' > "$CACHE"
+
+[[ ! -s "$CACHE" ]] && exit 1
+
+# --- wofi menu ---
+choice=$(cat "$CACHE" | wofi --dmenu --prompt "Bluetooth")
+
+[[ -z "$choice" ]] && exit 0
+
+ADDRESS=$(echo "$choice" | awk '{print $1}')
+
+# --- check connection state ---
+info=$(bluetoothctl info "$ADDRESS")
+connected=$(echo "$info" | awk '/Connected/ {print $2}')
+paired=$(echo "$info" | awk '/Paired/ {print $2}')
+
+# already connected → disconnect
+if [[ "$connected" == "yes" ]]; then
+    bluetoothctl disconnect "$ADDRESS"
     exit 0
 fi
 
-# Get list of available devices
-devices=$(bluetoothctl devices | awk '{print $2 " - " substr($0, index($0,$3))}')
-
-# Add options for power toggle
-options="Toggle Power\n$devices"
-
-# Show menu via Wofi
-choice=$(echo -e "$options" | wofi --dmenu --prompt "Bluetooth")
-
-# Handle selection
-if [[ "$choice" == "Toggle Power" ]]; then
-    # Check current power state
-    STATE=$(bluetoothctl show | grep "Powered:" | awk '{print $2}')
-    if [ "$STATE" = "yes" ]; then
-        bluetoothctl power off
-    else
-        bluetoothctl power on
-    fi
-elif [[ -n "$choice" ]]; then
-    # Extract device MAC
-    mac=$(echo $choice | awk '{print $1}')
-    # Check if connected
-    status=$(bluetoothctl info $mac | grep "Connected" | awk '{print $2}')
-    if [[ "$status" == "yes" ]]; then
-        bluetoothctl disconnect $mac
-    else
-        bluetoothctl connect $mac
-    fi
+# pair if needed
+if [[ "$paired" == "no" ]]; then
+    timeout "$TIMEOUT" bluetoothctl pair "$ADDRESS" || exit 1
+    bluetoothctl trust "$ADDRESS"
 fi
+
+# connect
+timeout "$TIMEOUT" bluetoothctl conne
