@@ -48,9 +48,11 @@
   },
 
   "pulseaudio": {
-    "format": "  {volume}% ",
-    "format-muted": "  muted ",
-    "scroll-step": 5
+    "format": " {volume}% ",
+    "format-muted": " muted ",
+    "scroll-step": 5,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "bash -c 'pgrep -x pavucontrol >/dev/null && pkill pavucontrol || GTK_THEME=Adwaita:dark pavucontrol'"
   },
 
   "network": {
