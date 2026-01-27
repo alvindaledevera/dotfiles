@@ -10,6 +10,7 @@ for_window [window_type="normal"] border none
 for_window [tiling] border pixel 2
 
 exec_always bash -c "source $HOME/.profile"
+exec bluetoothctl power off >/dev/null 2>&1
 
 ### Variables
 #
