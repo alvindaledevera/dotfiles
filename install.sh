@@ -38,15 +38,28 @@ for pkg in "${STOW_PACKAGES[@]}"; do
 done
 
 
-# power menu
+# scripts
 chmod +x ~/scripts/*
-echo "Waybar powermenu.sh is now executable"
+echo "scripts folder is now executable"
 
 
 #copy Pictures
 mkdir ~/Pictures
 cp Pictures/* ~/Pictures
 echo "Wallpapers copy to ~/Pictures"
+
+
+# ------------------------------------------
+# 6️⃣ Setup PAM fingerprint
+# ------------------------------------------
+FINGERPRINT_SCRIPT="./scripts/scripts/setuppamfingerprint.sh"
+
+if [ -f "$FINGERPRINT_SCRIPT" ]; then
+    echo "Setting up fingerprint authentication..."
+    sudo bash "$FINGERPRINT_SCRIPT"
+else
+    echo "Warning: $FINGERPRINT_SCRIPT not found, skipping fingerprint setup."
+fi
 
 
 echo "✅ Installation complete!"
