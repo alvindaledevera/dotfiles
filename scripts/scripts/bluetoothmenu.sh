@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-TIMEOUT=5
+TIMEOUT=15
 
 CACHE="/tmp/bt_devices"
 
@@ -58,4 +58,4 @@ if [[ "$paired" == "no" ]]; then
 fi
 
 # connect
-timeout "$TIMEOUT" bluetoothctl conne
+timeout "$TIMEOUT" bluetoothctl connect "$ADDRESS"
