@@ -52,7 +52,7 @@ echo "Wallpapers copy to ~/Pictures"
 # ------------------------------------------
 # 6️⃣ Setup PAM fingerprint
 # ------------------------------------------
-FINGERPRINT_SCRIPT="./scripts/scripts/setuppamfingerprint.sh"
+FINGERPRINT_SCRIPT="~/scripts/setuppamfingerprint.sh"
 
 if [ -f "$FINGERPRINT_SCRIPT" ]; then
     echo "Setting up fingerprint authentication..."
@@ -60,7 +60,6 @@ if [ -f "$FINGERPRINT_SCRIPT" ]; then
 else
     echo "Warning: $FINGERPRINT_SCRIPT not found, skipping fingerprint setup."
 fi
-
 
 echo "✅ Installation complete!"
 echo "Please log out and log back in to apply environment variables and dark theme."
