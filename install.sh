@@ -52,7 +52,7 @@ echo "Wallpapers copy to ~/Pictures"
 # ------------------------------------------
 # 6️⃣ Setup PAM fingerprint
 # ------------------------------------------
-FINGERPRINT_SCRIPT="~/scripts/setuppamfingerprint.sh"
+FINGERPRINT_SCRIPT="$HOME/scripts/setuppamfingerprint.sh"
 
 if [ -f "$FINGERPRINT_SCRIPT" ]; then
     echo "Setting up fingerprint authentication..."
