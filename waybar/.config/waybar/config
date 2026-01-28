@@ -4,8 +4,7 @@
   "spacing": 4,
   "modules-left": [
     "custom/applauncher",
-    "sway/workspaces",
-    "clock"],
+    "sway/workspaces"],
   "modules-center": ["sway/window"],
   "modules-right": [
     "cpu",
@@ -15,6 +14,7 @@
     "bluetooth",
     "battery",
     "tray",
+    "clock",
     "custom/power"    
   ],
 
@@ -44,7 +44,7 @@
         "format": " {}%  "
   },
   "clock": {
-    "format": "\t\t{:%a %b %d  %I:%M %p} "
+    "format": "{:%a %b %d  %I:%M %p} "
   },
 
   "pulseaudio": {
