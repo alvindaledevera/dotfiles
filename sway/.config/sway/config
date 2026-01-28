@@ -98,6 +98,8 @@ output DP-2 resolution 1600x900 position 0,0
     bindsym $mod+q kill
     #logout option
     bindsym $mod+Shift+q exec ~/scripts/powermenu.sh
+    #fingerprint option
+    bindsym $mod+Ctrl+Shift+f exec alacritty -e bash -c '~/scripts/fingerprint.sh'
 
     # Start your launcher
     bindsym $mod+d exec $menu
