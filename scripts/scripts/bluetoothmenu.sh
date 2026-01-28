@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-TIMEOUT=15
+TIMEOUT=1
 
 CACHE="/tmp/bt_devices"
 
