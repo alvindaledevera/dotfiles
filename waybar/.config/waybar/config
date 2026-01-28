@@ -70,10 +70,11 @@
     "format-connected": " {device_alias}",
     "format-connected-battery": " {device_alias} {device_battery_percentage}%",
     "format-disabled": "󰂲 off",
-    "tooltip-format": "{status}\n{device_alias}",
+    "tooltip-format": "{status}\n{device_alias} {device_battery_percentage}%",
     "on-click":"bluetoothctl show | grep -q \"Powered: yes\" && bluetoothctl power off || bluetoothctl power on",
     "on-click-right": "~/scripts/bluetoothmenu.sh"
   },
+
 
   "battery": {
     "interval": 60,
