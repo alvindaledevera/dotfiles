@@ -76,11 +76,14 @@
   },
 
   "battery": {
-    "format": "   {capacity}% ",
+    "interval": 60,
     "states": {
-      "warning": 30,
-      "critical": 15
-    }
+        "warning": 30,
+        "critical": 15
+    },
+    "format": " {icon}  {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25
   },
 
   "custom/power": {
