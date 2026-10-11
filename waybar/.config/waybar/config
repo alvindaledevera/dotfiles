@@ -1,6 +1,6 @@
 {
   "layer": "top",
-  "position": "top",
+  "position": "bottom",
   "spacing": 4,
   "modules-left": [
     "custom/applauncher",
@@ -48,15 +48,21 @@
   },
 
   "pulseaudio": {
-    "format": "  {volume}% ",
-    "format-muted": "  muted ",
-    "scroll-step": 5
+    "format": " {volume}% ",
+    "format-muted": " muted ",
+    "scroll-step": 5,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "bash -c 'pgrep -x pavucontrol >/dev/null && pkill pavucontrol || GTK_THEME=Adwaita:dark pavucontrol'"
   },
 
   "network": {
-    "format-wifi": "  {signalStrength}% ",
+    "format-wifi": " ",
     "format-ethernet": "󰈀  wired ",
-    "format-disconnected": "⚠"
+    "format-disconnected": "⚠",
+    "format-disabled" : "󰤮",
+    "tooltip-format" : "{signalStrength}% {essid}",
+    "on-click": "bash -c 'nmcli radio wifi | grep -q enabled && nmcli radio wifi off || nmcli radio wifi on'",
+    "on-click-right": "bash -c 'pgrep -x nmtui >/dev/null && pkill nmtui || alacritty -e nmtui'"
   },
 
   "bluetooth": {
@@ -70,11 +76,14 @@
   },
 
   "battery": {
-    "format": "   {capacity}% ",
+    "interval": 60,
     "states": {
-      "warning": 30,
-      "critical": 15
-    }
+        "warning": 30,
+        "critical": 15
+    },
+    "format": " {icon}  {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25
   },
 
   "custom/power": {

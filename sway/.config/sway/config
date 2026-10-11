@@ -9,7 +9,10 @@ for_window [window_type="normal"] border none
 
 for_window [tiling] border pixel 2
 
+
 exec_always bash -c "source $HOME/.profile"
+exec bluetoothctl power off >/dev/null 2>&1
+
 
 ### Variables
 #
@@ -50,8 +53,12 @@ output * bg ~/Pictures/bg.png fill
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
-output eDP-1 resolution 1920x1080 position 1600,0
-output DP-2 resolution 1600x900 position 0,0
+output eDP-1 resolution 1920x1080 position 0,900
+output DP-3 resolution 1600x900 position 0,0
+
+#set workspace 1 to default to eDP-1
+workspace 1 output eDP-1
+
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -78,6 +85,10 @@ output DP-2 resolution 1600x900 position 0,0
 #       natural_scroll enabled
 #       middle_emulation enabled
 #   }
+input "type:touchpad" {
+    tap enabled
+    natural_scroll enabled
+}
 #
 #   input type:keyboard {
 #       xkb_layout "eu"
@@ -97,6 +108,7 @@ output DP-2 resolution 1600x900 position 0,0
     bindsym $mod+q kill
     #logout option
     bindsym $mod+Shift+q exec ~/scripts/powermenu.sh
+    bindsym $mod+Ctrl+Shift+f exec alacritty -e bash -c '~/scripts/fingerprint.sh'
 
     # Start your launcher
     bindsym $mod+d exec $menu

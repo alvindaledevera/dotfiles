@@ -27,7 +27,7 @@ fi
 # 3️⃣ Stow all dotfiles (adopt existing configs) - loop version
 # ------------------------------------------
 DOTFILES_DIR="$(pwd)"
-STOW_PACKAGES=("env" "gtk" "qt" "sway" "waybar" "kde" "scripts")
+STOW_PACKAGES=("env" "gtk" "qt" "sway" "swaylock" "waybar" "kde" "scripts")
 
 echo "Stowing all dotfiles (adopt existing configs)..."
 cd "$DOTFILES_DIR"
@@ -40,7 +40,26 @@ done
 
 # power menu
 chmod +x ~/scripts/*
-echo "Waybar powermenu.sh is now executable"
+echo "scripts folder is now executable"
+
+#copy Pictures
+mkdir ~/Pictures
+cp Pictures/* ~/Pictures
+echo "Wallpapers copy to ~/Pictures"
+
+
+
+# ------------------------------------------
+# 6️⃣ Setup PAM fingerprint
+# ------------------------------------------
+FINGERPRINT_SCRIPT="~/scripts/setuppamfingerprint.sh"
+
+if [ -f "$FINGERPRINT_SCRIPT" ]; then
+    echo "Setting up fingerprint authentication..."
+    sudo bash "$FINGERPRINT_SCRIPT"
+else
+    echo "Warning: $FINGERPRINT_SCRIPT not found, skipping fingerprint setup."
+fi
 
 
 echo "✅ Installation complete!"

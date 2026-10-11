@@ -1,5 +1,21 @@
 [Compositing]
 Enabled=true
 
+[Desktops]
+Id_1=6fe6e6d0-9b2d-473c-bf9a-960c7171859d
+Number=1
+Rows=1
+
 [Effect-Blur]
 Enabled=true
+
+[Tiling][6fe6e6d0-9b2d-473c-bf9a-960c7171859d][0b92b389-a952-44bf-9367-74e4695eb2b0]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][6fe6e6d0-9b2d-473c-bf9a-960c7171859d][d69eab63-11fc-4d44-beee-19c7f340ad7a]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Xwayland]
+Scale=1
