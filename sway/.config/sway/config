@@ -53,8 +53,12 @@ output * bg ~/Pictures/bg.png fill
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
+# output eDP-1 resolution 1920x1080 position 0,900
+#output DP-1 resolution 1600x900 position 0,0
+#output DP-2 resolution 1600x900 position 0,0
+#output DP-3 resolution 1600x900 position 0,0
+output "Hewlett Packard HP E202 3CQ92721MW" resolution 1600x900 position 0,0
 output eDP-1 resolution 1920x1080 position 0,900
-output DP-3 resolution 1600x900 position 0,0
 
 #set workspace 1 to default to eDP-1
 workspace 1 output eDP-1
@@ -287,5 +291,7 @@ bar {
     swaybar_command waybar
     
 }
+
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 include /etc/sway/config.d/*
